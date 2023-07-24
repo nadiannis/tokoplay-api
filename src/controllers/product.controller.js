@@ -60,21 +60,14 @@ const update = async (req, res) => {
 
     const data = await productService.update(productId, productData);
 
-    if (!data) {
-      return res
-        .status(httpStatus.NOT_FOUND)
-        .json({ status: 'error', message: 'Product not found' });
-    }
-
     res.status(httpStatus.OK).json({
       status: 'success',
       message: 'Product updated successfully',
       data,
     });
   } catch (error) {
-    res
-      .status(httpStatus.INTERNAL_SERVER_ERROR)
-      .json({ status: 'error', message: error.message });
+    const statusCode = error.statusCode || httpStatus.INTERNAL_SERVER_ERROR;
+    res.status(statusCode).json({ status: 'error', message: error.message });
   }
 };
 
@@ -88,22 +81,15 @@ const remove = async (req, res) => {
         .json({ status: 'error', message: 'Product ID is not valid' });
     }
 
-    const data = await productService.remove(productId);
-
-    if (!data) {
-      return res
-        .status(httpStatus.NOT_FOUND)
-        .json({ status: 'error', message: 'Product not found' });
-    }
+    await productService.remove(productId);
 
     res.status(httpStatus.OK).json({
       status: 'success',
       message: 'Product deleted successfully',
     });
   } catch (error) {
-    res
-      .status(httpStatus.INTERNAL_SERVER_ERROR)
-      .json({ status: 'error', message: error.message });
+    const statusCode = error.statusCode || httpStatus.INTERNAL_SERVER_ERROR;
+    res.status(statusCode).json({ status: 'error', message: error.message });
   }
 };
 
