@@ -6,17 +6,14 @@ const getAll = async (req, res) => {
   try {
     const data = await productService.getAll();
 
-    if (data.length === 0) {
-      return res.status(httpStatus.OK).json({
-        status: 'success',
-        message: 'There are no products available',
-        data,
-      });
-    }
+    const message =
+      data.length === 0
+        ? 'There are no products available'
+        : 'Products retrieved successfully';
 
     res.status(httpStatus.OK).json({
       status: 'success',
-      message: 'Products retrieved successfully',
+      message,
       data,
     });
   } catch (error) {
