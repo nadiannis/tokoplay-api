@@ -5,12 +5,17 @@ const getAll = async (query) => {
   let videos;
 
   if (!query) {
-    videos = await Video.find({}, '_id title thumbnailUrl');
+    videos = await Video.find({}, '_id title thumbnailUrl createdAt');
   } else {
-    const { page, limit } = query;
-    videos = await Video.find({}, '_id title thumbnailUrl')
+    const { page, limit, sort } = query;
+
+    const sortValue =
+      sort === 'desc' ? { createdAt: 'desc' } : { createdAt: 'asc' };
+
+    videos = await Video.find({}, '_id title thumbnailUrl createdAt')
       .limit(limit)
-      .skip((page - 1) * limit);
+      .skip((page - 1) * limit)
+      .sort({ ...sortValue });
   }
 
   return videos;

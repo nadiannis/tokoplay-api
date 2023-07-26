@@ -6,8 +6,9 @@ const getAll = async (req, res) => {
   try {
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 12;
+    const sort = req.query.sort;
 
-    const data = await videoService.getAll({ page, limit });
+    const data = await videoService.getAll({ page, limit, sort });
     const count = await videoService.count();
     const totalPages = Math.ceil(count / limit);
 
@@ -89,7 +90,9 @@ const update = async (req, res) => {
         .json({ status: 'error', message: 'Video ID is not valid' });
     }
 
-    const data = await videoService.update(videoId, videoData);
+    const { products, ...otherVideoData } = videoData;
+    console.log(products);
+    const data = await videoService.update(videoId, otherVideoData);
 
     res.status(httpStatus.OK).json({
       status: 'success',
