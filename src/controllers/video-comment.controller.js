@@ -7,6 +7,7 @@ const getAllComments = async (req, res) => {
     const { videoId } = req.params;
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 12;
+    const sort = req.query.sort;
 
     if (!isValidId(videoId)) {
       return res
@@ -17,6 +18,7 @@ const getAllComments = async (req, res) => {
     const data = await videoCommentService.getAllComments(videoId, {
       page,
       limit,
+      sort,
     });
     const count = await videoCommentService.countComments(videoId);
     const totalPages = Math.ceil(count / limit);

@@ -16,10 +16,15 @@ const getAllComments = async (videoId, query) => {
   if (!query) {
     comments = await Comment.find({ videoId });
   } else {
-    const { page, limit } = query;
+    const { page, limit, sort } = query;
+
+    const sortValue =
+      sort === 'desc' ? { createdAt: 'desc' } : { createdAt: 'asc' };
+
     comments = await Comment.find({ videoId })
       .limit(limit)
-      .skip((page - 1) * limit);
+      .skip((page - 1) * limit)
+      .sort({ ...sortValue });
   }
 
   return comments;
