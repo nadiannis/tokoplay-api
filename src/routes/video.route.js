@@ -1,6 +1,7 @@
 const express = require('express');
 const videoController = require('../controllers/video.controller');
 const videoProductController = require('../controllers/video-product.controller');
+const videoCommentController = require('../controllers/video-comment.controller');
 
 const router = express.Router();
 
@@ -21,5 +22,10 @@ router.delete(
   '/:videoId/products/:productId',
   videoProductController.removeProducts
 );
+
+router
+  .route('/:videoId/comments')
+  .get(videoCommentController.getAllComments)
+  .post(videoCommentController.createComment);
 
 module.exports = router;
