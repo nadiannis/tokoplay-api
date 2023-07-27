@@ -11,7 +11,7 @@
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Run Locally](#run-locally)
-- [Database Design](#database-design)
+- [Database Structure](#database-structure)
 - [API Structure](#api-structure)
 - [API Endpoints](#api-endpoints)
 
@@ -89,9 +89,85 @@ Run the development server.
 yarn dev
 ```
 
-## Database Design
+## Database Structure
+
+### Database Design
+
+Here you can see the relationships between entities.
+
+![Tokoplay DB Schema](./docs/img/tokoplay-db-schema.jpg)
+
+### Database Implemented in MongoDB
+
+This is the implementation of the database design in MongoDB.
+
+**products**
+
+```
+{
+  "_id": objectId,
+  "title": string,
+  "price": integer,
+  "pageUrl": string
+}
+```
+
+**videos**
+
+```
+{
+  "_id": objectId,
+  "title": string,
+  "thumbnailUrl": string,
+  "videoUrl": string,
+  "createdAt": date,
+  "updatedAt": date,
+  "products": array(objectId)
+}
+```
+
+**comments**
+
+```
+{
+  "_id": objectId,
+  "username": string,
+  "content": string,
+  "createdAt": date,
+  "videoId": objectId
+}
+```
+
+### Database Explanation
+
+- There are 3 collections: products, videos, & comments.
+- A video can have many products, and a product can be in many videos. It is many-to-many relationship. In MongoDB, we can use array as a value of the field. Instead of adding a collection to store the id of video & product, I put array of product id in the `videos` collection since the products will also need to be retrieved when a video is retrieved.
+- A video has many comments. But a comment belongs to just one video. It is one-to-many relationship. There is a video id in the `comments` collection to identify which comment belongs to which video.
 
 ## API Structure
+
+I use N-layer architecture for the API, where there is controller, service, & model.
+
+- **Model Layer**: This layer contains the data model. Models represent the data structures & interactions with the database.
+- **Service Layer**: This layer contains core business logic of the API.
+- **Controller Layer**: This layer is responsible for handling the requests, process them, & send back responses.
+
+```
+.
+├── src              # contains main source code
+│   ├── controllers  # stores the controllers
+│   ├── models       # stores the models
+│   ├── routes       # contains route files
+│   ├── services     # contains business logic
+│   ├── utils        # stores utility functions
+│   └── index.js     # the entry point
+├── .env             # stores environment variables
+├── ...
+├── package.json     # contains information about the project, dependencies, scripts, configs
+├── README.md        # documentation
+├── yarn.lock
+.
+```
 
 ## API Endpoints
 
@@ -101,7 +177,7 @@ yarn dev
 
 ```
 {
-  "id": string,
+  "_id": string,
   "title": string,
   "thumbnailUrl": string,
   "videoUrl": string,
@@ -115,7 +191,7 @@ yarn dev
 
 ```
 {
-  "id": string,
+  "_id": string,
   "title": string,
   "thumbnailUrl": string,
   "createdAt": datetime,
@@ -488,7 +564,7 @@ Deletes the specified video.
 
 ```
 {
-  "id": string,
+  "_id": string,
   "title": string,
   "price": integer,
   "pageUrl": string
@@ -1081,7 +1157,7 @@ Deletes a product from a specified video & returns the updated specified video w
 
 ```
 {
-  "id": string,
+  "_id": string,
   "username": string,
   "content": string,
   "createdAt": datetime,
