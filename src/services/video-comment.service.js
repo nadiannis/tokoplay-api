@@ -19,7 +19,7 @@ const getAllComments = async (videoId, query) => {
     const { page, limit, sort } = query;
 
     const sortValue =
-      sort === 'desc' ? { createdAt: 'desc' } : { createdAt: 'asc' };
+      sort === 'recent' ? { createdAt: 'desc' } : { createdAt: 'asc' };
 
     comments = await Comment.find({ videoId })
       .limit(limit)

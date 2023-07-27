@@ -10,7 +10,7 @@ const getAll = async (query) => {
     const { page, limit, sort } = query;
 
     const sortValue =
-      sort === 'desc' ? { createdAt: 'desc' } : { createdAt: 'asc' };
+      sort === 'recent' ? { createdAt: 'desc' } : { createdAt: 'asc' };
 
     videos = await Video.find({}, '_id title thumbnailUrl createdAt')
       .limit(limit)
