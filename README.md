@@ -21,21 +21,22 @@
 
 ## Features
 
-- Get list of videos.
-- Add a video.
-- Get video details.
-- Update a video.
-- Delete a video.
-- Sort videos by the most recent.
-- Get list ofproducts.
-- Update a product.
-- Delete a product.
-- Add product(s) to a video.
-- Delete a product from a video.
-- Get list of products of a video.
-- Get list of comments of a video.
-- Post a comment to a video.
-- Sort comments by the most recent.
+- [Get list of videos](#get-apivideos)
+- [Sort videos by the most recent](#get-apivideos)
+- [Add a video](#post-apivideos)
+- [Get video details](##get-apivideosvideoid)
+- [Update a video](#patch-apivideosvideoid)
+- [Delete a video](#delete-apivideosvideoid)
+- [Get list of products](#get-apiproducts)
+- [Add a product](#post-apiproducts)
+- [Update a product](#patch-apiproductsproductid)
+- [Delete a product](#delete-apiproductsproductid)
+- [Get products of a video](#get-apivideosvideoidproducts)
+- [Add product(s) to a video](#post-apivideosvideoidproducts)
+- [Delete a product from a video](#delete-apivideosvideoidproductsproductid)
+- [Get comments of a video](#get-apivideosvideoidcomments)
+- [Sort comments by the most recent](#get-apivideosvideoidcomments)
+- [Post a comment to a video](#post-apivideosvideoidcomments)
 
 ## Tech Stack
 
