@@ -146,7 +146,7 @@ This is the implementation of the database design in MongoDB.
 
 ## API Structure
 
-I use N-layer architecture for the API, where there is controller, service, & model.
+I use N-layer architecture for the API, which includes a controller, service, & model. N-layer architecture is a pattern used to organize & separate concerns in software development, making the code more modular & maintainable.
 
 - **Model Layer**: This layer contains the data model. Models represent the data structures & interactions with the database.
 - **Service Layer**: This layer contains core business logic of the API.
