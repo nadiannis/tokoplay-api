@@ -53,7 +53,7 @@
 
 - Make sure you have [Node.js](https://nodejs.org) & [Yarn](https://yarnpkg.com) installed on your computer.
 
-- I also use MongoDB database in local. If you want to create the database on your local, make sure you have [MongoDB Community Server](https://www.mongodb.com/docs/manual/administration/install-community) & [MongoDB Shell](https://www.mongodb.com/try/download/shell) installed on your computer.
+- I use MongoDB database in local. If you want to create the database on your local, make sure you have [MongoDB Community Server](https://www.mongodb.com/docs/manual/administration/install-community) & [MongoDB Shell](https://www.mongodb.com/try/download/shell) installed on your computer.
 
 - Clone the repo.
 
@@ -123,6 +123,8 @@ yarn dev
 ```
 
 ### GET /api/videos
+
+[`^ back to top ^`](#features)
 
 Returns all videos.
 
@@ -198,6 +200,8 @@ Returns all videos.
 
 ### POST /api/videos
 
+[`^ back to top ^`](#features)
+
 Creates a new video & returns the new object.
 
 - **URL Params**
@@ -259,6 +263,8 @@ Creates a new video & returns the new object.
     ```
 
 ### GET /api/videos/:videoId
+
+[`^ back to top ^`](#features)
 
 Returns the specified video.
 
@@ -328,6 +334,8 @@ Returns the specified video.
     ```
 
 ### PATCH /api/videos/:videoId
+
+[`^ back to top ^`](#features)
 
 Updates fields on the specified video & returns the updated object.
 
@@ -403,6 +411,8 @@ Updates fields on the specified video & returns the updated object.
     ```
 
 ### DELETE /api/videos/:videoId
+
+[`^ back to top ^`](#features)
 
 Deletes the specified video.
 
@@ -487,6 +497,8 @@ Deletes the specified video.
 
 ### GET /api/products
 
+[`^ back to top ^`](#features)
+
 Returns all products.
 
 - **URL Params**
@@ -555,6 +567,8 @@ Returns all products.
 
 ### POST /api/products
 
+[`^ back to top ^`](#features)
+
 Creates a new product & returns the new object.
 
 - **URL Params**
@@ -616,6 +630,8 @@ Creates a new product & returns the new object.
     ```
 
 ### PATCH /api/products/:productId
+
+[`^ back to top ^`](#features)
 
 Updates fields on the specified product & returns the updated object.
 
@@ -692,6 +708,8 @@ Updates fields on the specified product & returns the updated object.
 
 ### DELETE /api/products/:productId
 
+[`^ back to top ^`](#features)
+
 Deletes the specified product.
 
 - **URL Params**
@@ -759,6 +777,8 @@ Deletes the specified product.
     ```
 
 ### GET /api/videos/:videoId/products
+
+[`^ back to top ^`](#features)
 
 Returns all products associated with the specified video.
 
@@ -853,6 +873,8 @@ Returns all products associated with the specified video.
     ```
 
 ### POST /api/videos/:videoId/products
+
+[`^ back to top ^`](#features)
 
 Adds product(s) to the specified video & returns the updated specified video with the products.
 
@@ -959,6 +981,8 @@ Adds product(s) to the specified video & returns the updated specified video wit
     ```
 
 ### DELETE /api/videos/:videoId/products/:productId
+
+[`^ back to top ^`](#features)
 
 Deletes a product from a specified video & returns the updated specified video with the products.
 
@@ -1067,6 +1091,8 @@ Deletes a product from a specified video & returns the updated specified video w
 
 ### GET /api/videos/:videoId/comments
 
+[`^ back to top ^`](#features)
+
 Returns all comments associated with the specified video.
 
 - **URL Params**
@@ -1166,6 +1192,8 @@ Returns all comments associated with the specified video.
     ```
 
 ### POST /api/videos/:videoId/comments
+
+[`^ back to top ^`](#features)
 
 Creates a new comment associated with the specified video & returns the new object.
 
