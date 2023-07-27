@@ -17,12 +17,16 @@
 
 ## Description
 
+[`^ back to top ^`](#table-of-contents)
+
 **Tokoplay** is a platform where seller can promote products through videos to potential buyers. It is a simple clone of Tokopedia Play. This repo is the API of the app. It is built with [Express](https://expressjs.com). The data is stored in [MongoDB](https://www.mongodb.com) database.
 
 ## Features
 
+[`^ back to top ^`](#table-of-contents)
+
 - [Get list of videos](#get-apivideos)
-- [Sort videos by the most recent](#get-apivideos)
+- [Sort videos by the most recent](#get-apivideossortrecent)
 - [Add a video](#post-apivideos)
 - [Get video details](##get-apivideosvideoid)
 - [Update a video](#patch-apivideosvideoid)
@@ -35,10 +39,12 @@
 - [Add product(s) to a video](#post-apivideosvideoidproducts)
 - [Delete a product from a video](#delete-apivideosvideoidproductsproductid)
 - [Get comments of a video](#get-apivideosvideoidcomments)
-- [Sort comments by the most recent](#get-apivideosvideoidcomments)
+- [Sort comments by the most recent](#get-apivideosvideoIdcommentssortrecent)
 - [Post a comment to a video](#post-apivideosvideoidcomments)
 
 ## Tech Stack
+
+[`^ back to top ^`](#table-of-contents)
 
 - Language: [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - Web Framework: [Express](https://expressjs.com)
@@ -48,6 +54,8 @@
 - Code Formatter: [Prettier](https://prettier.io)
 
 ## Run Locally
+
+[`^ back to top ^`](#table-of-contents)
 
 ### Getting Started
 
@@ -90,6 +98,8 @@ yarn dev
 ```
 
 ## Database Structure
+
+[`^ back to top ^`](#table-of-contents)
 
 ### Database Design
 
@@ -146,6 +156,8 @@ This is the implementation of the database design in MongoDB.
 
 ## API Structure
 
+[`^ back to top ^`](#table-of-contents)
+
 I use N-layer architecture for the API, which includes a controller, service, & model. N-layer architecture is a pattern used to organize & separate concerns in software development, making the code more modular & maintainable.
 
 - **Model Layer**: This layer contains the data model. Models represent the data structures & interactions with the database.
@@ -170,6 +182,8 @@ I use N-layer architecture for the API, which includes a controller, service, & 
 ```
 
 ## API Endpoints
+
+[`^ back to top ^`](#table-of-contents)
 
 **Video**
 
@@ -203,6 +217,82 @@ I use N-layer architecture for the API, which includes a controller, service, & 
 [`^ back to top ^`](#features)
 
 Returns all videos.
+
+- **URL Params**
+
+  None
+
+- **Data Params**
+
+  None
+
+- **Headers**
+
+  Content-Type: application/json
+
+- **Success Response**
+
+  - **Code: 200**
+
+    Content:
+
+    ```
+    {
+      "status": "success",
+      "message": "Videos retrieved successfully",
+      "data": [
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+      ],
+      "page": integer,
+      "totalPages": integer,
+      "count": integer
+    }
+    ```
+
+    OR
+
+    Content:
+
+    ```
+    {
+      "status": "success",
+      "message": "There are no videos available",
+      "data": [],
+      "page": 1,
+      "totalPages": 0,
+      "count": 0
+    }
+    ```
+
+- **Error Response**
+
+  - **Code: 500**
+
+    Content:
+
+    ```
+    {
+      "status": "error",
+      "message": <error_message>
+    }
+    ```
+
+### GET /api/videos?sort=recent
+
+[`^ back to top ^`](#features)
+
+Returns all videos sorted by the most recent.
 
 - **URL Params**
 
@@ -1170,6 +1260,108 @@ Deletes a product from a specified video & returns the updated specified video w
 [`^ back to top ^`](#features)
 
 Returns all comments associated with the specified video.
+
+- **URL Params**
+
+  _Required:_ `videoId=[string]`
+
+- **Data Params**
+
+  None
+
+- **Headers**
+
+  Content-Type: application/json
+
+- **Success Response**
+
+  - **Code: 200**
+
+    Content:
+
+    ```
+    {
+      "status": "success",
+      "message": "Comments of the video retrieved successfully",
+      "data": [
+        {<comment_object>},
+        {<comment_object>},
+        {<comment_object>},
+        {<comment_object>},
+        {<comment_object>},
+        {<comment_object>},
+        {<comment_object>},
+        {<comment_object>},
+        {<comment_object>},
+        {<comment_object>},
+        {<comment_object>},
+        {<comment_object>},
+      ],
+      "page": integer,
+      "totalPages": integer,
+      "count": integer
+    }
+    ```
+
+    OR
+
+    Content:
+
+    ```
+    {
+      "status": "success",
+      "message": "There are no comments in the video",
+      "data": [],
+      "page": 1,
+      "totalPages": 0,
+      "count": 0
+    }
+    ```
+
+- **Error Response**
+
+  - **Code: 400**
+
+    Content:
+
+    ```
+    {
+      "status": "error",
+      "message": "Video ID is not valid"
+    }
+    ```
+
+    OR
+
+  - **Code: 404**
+
+    Content:
+
+    ```
+    {
+      "status": "error",
+      "message": "Video not found"
+    }
+    ```
+
+    OR
+
+  - **Code: 500**
+
+    Content:
+
+    ```
+    {
+      "status": "error",
+      "message": <error_message>
+    }
+    ```
+
+### GET /api/videos/:videoId/comments?sort=recent
+
+[`^ back to top ^`](#features)
+
+Returns all comments associated with the specified video, sorted by the most recent.
 
 - **URL Params**
 
