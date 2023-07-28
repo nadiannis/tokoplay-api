@@ -28,7 +28,7 @@
 - [Get list of videos](#get-apivideos)
 - [Sort videos by the most recent](#get-apivideossortrecent)
 - [Add a video](#post-apivideos)
-- [Get video details](##get-apivideosvideoid)
+- [Get video details](#get-apivideosvideoid)
 - [Update a video](#patch-apivideosvideoid)
 - [Delete a video](#delete-apivideosvideoid)
 - [Get list of products](#get-apiproducts)
@@ -39,8 +39,8 @@
 - [Add product(s) to a video](#post-apivideosvideoidproducts)
 - [Delete a product from a video](#delete-apivideosvideoidproductsproductid)
 - [Get comments of a video](#get-apivideosvideoidcomments)
-- [Sort comments by the most recent](#get-apivideosvideoIdcommentssortrecent)
-- [Post a comment to a video](#post-apivideosvideoidcomments)
+- [Sort comments by the most recent](#get-apivideosvideoidcommentssortrecent)
+- [Add a comment to a video](#post-apivideosvideoidcomments)
 
 ## Tech Stack
 
@@ -61,7 +61,7 @@
 
 - Make sure you have [Node.js](https://nodejs.org) & [Yarn](https://yarnpkg.com) installed on your computer.
 
-- I use MongoDB database in local. If you want to create the database on your local, make sure you have [MongoDB Community Server](https://www.mongodb.com/docs/manual/administration/install-community) & [MongoDB Shell](https://www.mongodb.com/try/download/shell) installed on your computer.
+- I use MongoDB database in local. You can also create the database on your local, but make sure you have [MongoDB Community Server](https://www.mongodb.com/docs/manual/administration/install-community) & [MongoDB Shell](https://www.mongodb.com/try/download/shell) installed on your computer.
 
 - Clone the repo.
 
@@ -196,8 +196,8 @@ I use N-layer architecture for the API, which includes a controller, service, & 
   "thumbnailUrl": string,
   "videoUrl": string,
   "createdAt": datetime,
-  "updatedAt": datetime
-  "products": [<product_id>, <product_id>, ...],
+  "updatedAt": datetime,
+  "products": [<product_id>, <product_id>, ...]
 }
 ```
 
@@ -208,7 +208,25 @@ I use N-layer architecture for the API, which includes a controller, service, & 
   "_id": string,
   "title": string,
   "thumbnailUrl": string,
+  "createdAt": datetime
+}
+```
+
+- Video object with products populated
+
+```
+{
+  "_id": string,
+  "title": string,
+  "thumbnailUrl": string,
+  "videoUrl": string,
   "createdAt": datetime,
+  "updatedAt": datetime,
+  "products": [
+    {<product_object>},
+    {<product_object>},
+    ...
+  ]
 }
 ```
 
@@ -456,7 +474,7 @@ Returns the specified video.
     {
       "status": "success",
       "message": "Video retrieved successfully",
-      "data": {<video_object>}
+      "data": {<video_object_with_products_populated>}
     }
     ```
 
@@ -702,7 +720,10 @@ Returns all products.
         {<product_object>},
         {<product_object>},
         {<product_object>},
-      ]
+      ],
+      "page": integer,
+      "totalPages": integer,
+      "count": integer
     }
     ```
 
@@ -714,7 +735,10 @@ Returns all products.
     {
       "status": "success",
       "message": "There are no products available",
-      "data": []
+      "data": [],
+      "page": 1,
+      "totalPages": 0,
+      "count": 0
     }
     ```
 
@@ -1198,7 +1222,7 @@ Deletes a product from a specified video & returns the updated specified video w
     ```
     {
       "status": "error",
-      "message": "productIds should be an array"
+      "message": "Product ID is not valid"
     }
     ```
 
