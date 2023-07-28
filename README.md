@@ -61,7 +61,7 @@
 
 - Make sure you have [Node.js](https://nodejs.org) & [Yarn](https://yarnpkg.com) installed on your computer.
 
-- I use MongoDB database in local. You can also create the database on your local, but make sure you have [MongoDB Community Server](https://www.mongodb.com/docs/manual/administration/install-community) & [MongoDB Shell](https://www.mongodb.com/try/download/shell) installed on your computer.
+- I use MongoDB database on local. You can also create the database on your local, but make sure you have [MongoDB Community Server](https://www.mongodb.com/docs/manual/administration/install-community) & [MongoDB Shell](https://www.mongodb.com/try/download/shell) installed on your computer.
 
 - Clone the repo.
 
@@ -75,7 +75,7 @@
 
 - Make a copy of `env.example` file & rename it to `.env`.
 
-  Write a MongoDB URI to connect the API to a database. I use MongoDB database in local.
+  Write a MongoDB URI to connect the API to a database. Make sure the MongoDB is ready to use. I use MongoDB database on local, named `tokoplay`.
 
   ```bash
   # example
@@ -91,11 +91,15 @@
 
 ### Development
 
-Run the development server.
+Run the development server. The API will run on port 8080, but you can change the port by specifying the `PORT` variable in `.env` file.
 
 ```bash
 yarn dev
 ```
+
+### Prepopulate Data
+
+You can prepopulate data into the database. I put the sample data in `./src/seeds/`. The data is in JSON. If you have [MongoDB Community Server](https://www.mongodb.com/docs/manual/administration/install-community) installed on your computer, you can use MongoDB Compass to import the JSON data to the database by first creating the database (`tokoplay`) & collections (`products`, `videos`, `comments`). Then in each collection, import the JSON data.
 
 ## Database Structure
 
@@ -170,6 +174,7 @@ I use N-layer architecture for the API, which includes a controller, service, & 
 │   ├── controllers  # stores the controllers
 │   ├── models       # stores the models
 │   ├── routes       # contains route files
+│   ├── seeds        # contains sample data in json that can be prepopulated to db
 │   ├── services     # contains business logic
 │   ├── utils        # stores utility functions
 │   └── index.js     # the entry point
