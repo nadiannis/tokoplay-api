@@ -1,8 +1,18 @@
 const httpStatus = require('http-status');
 const Product = require('../models/product.model');
 
-const getAll = async () => {
-  const products = await Product.find();
+const getAll = async (query) => {
+  let products;
+
+  if (!query) {
+    products = await Product.find();
+  } else {
+    const { page, limit } = query;
+
+    products = await Product.find()
+      .limit(limit)
+      .skip((page - 1) * limit);
+  }
 
   return products;
 };
@@ -41,9 +51,16 @@ const remove = async (productId) => {
   return product;
 };
 
+const count = async () => {
+  const totalProducts = await Product.countDocuments();
+
+  return totalProducts;
+};
+
 module.exports = {
   getAll,
   create,
   update,
   remove,
+  count,
 };

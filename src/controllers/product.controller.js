@@ -4,10 +4,15 @@ const { isValidId } = require('../utils/validation');
 
 const getAll = async (req, res) => {
   try {
-    const data = await productService.getAll();
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 12;
+
+    const data = await productService.getAll({ page, limit });
+    const count = await productService.count();
+    const totalPages = Math.ceil(count / limit);
 
     const message =
-      data.length === 0
+      count === 0
         ? 'There are no products available'
         : 'Products retrieved successfully';
 
@@ -15,6 +20,9 @@ const getAll = async (req, res) => {
       status: 'success',
       message,
       data,
+      page,
+      totalPages,
+      count,
     });
   } catch (error) {
     res
