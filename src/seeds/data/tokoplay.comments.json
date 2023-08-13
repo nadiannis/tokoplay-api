@@ -1,0 +1,574 @@
+[{
+  "_id": {
+    "$oid": "64d8cb5fa3e059b43f4e9c9a"
+  },
+  "username": "john",
+  "content": "kira2 bagusan ini atau lenovo ideapad slim ya?",
+  "videoId": {
+    "$oid": "64d8bfd3a3e059b43f4e9bd3"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:23:59.753Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8cb89a3e059b43f4e9c9d"
+  },
+  "username": "david",
+  "content": "Buat main dota enak ga bang?",
+  "videoId": {
+    "$oid": "64d8bfd3a3e059b43f4e9bd3"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:24:41.661Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8cbbba3e059b43f4e9cb0"
+  },
+  "username": "nadiannis",
+  "content": "Warnanya bagus bgt",
+  "videoId": {
+    "$oid": "64d8bfbaa3e059b43f4e9bd1"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:25:31.306Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8cc2da3e059b43f4e9cb3"
+  },
+  "username": "doni",
+  "content": "Harga segini worth it lah",
+  "videoId": {
+    "$oid": "64d8bfbaa3e059b43f4e9bd1"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:27:25.496Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8cc75a3e059b43f4e9cb6"
+  },
+  "username": "rachel",
+  "content": "bayarnya bisa via apa aja ya ini?",
+  "videoId": {
+    "$oid": "64d8bfbaa3e059b43f4e9bd1"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:28:37.867Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8cc9da3e059b43f4e9cb9"
+  },
+  "username": "fira",
+  "content": "pengennn :(",
+  "videoId": {
+    "$oid": "64d8bfbaa3e059b43f4e9bd1"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:29:17.443Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8ccd1a3e059b43f4e9cc0"
+  },
+  "username": "darko",
+  "content": "Looks good!",
+  "videoId": {
+    "$oid": "64d8bfbaa3e059b43f4e9bd1"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:30:09.861Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8cd06a3e059b43f4e9cd3"
+  },
+  "username": "amel",
+  "content": "ini tas awet bgt sih",
+  "videoId": {
+    "$oid": "64d8bfa0a3e059b43f4e9bcf"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:31:02.141Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8cd6aa3e059b43f4e9d08"
+  },
+  "username": "dimas",
+  "content": "Kalau dibandingin sama xiaomi fashion mouse, lebih silent dan nyaman yang mana ya?",
+  "videoId": {
+    "$oid": "64d8b83586be13d8b74ea61c"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:32:42.618Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8cd8fa3e059b43f4e9d0b"
+  },
+  "username": "nabila",
+  "content": "Udh beli & enak bgt dipakenya, minimalis..",
+  "videoId": {
+    "$oid": "64d8b83586be13d8b74ea61c"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:33:19.616Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8cdcaa3e059b43f4e9d22"
+  },
+  "username": "putra",
+  "content": "Enak mana bang dibanding keyboard macbook air bawaan aslinya?",
+  "videoId": {
+    "$oid": "64d8b79486be13d8b74ea612"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:34:18.513Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8cdf6a3e059b43f4e9d25"
+  },
+  "username": "indra",
+  "content": "feelnya kayak keyboard laptop?",
+  "videoId": {
+    "$oid": "64d8b79486be13d8b74ea612"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:35:02.731Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8ce14a3e059b43f4e9d28"
+  },
+  "username": "dwi",
+  "content": "bagus bgt keliatannya",
+  "videoId": {
+    "$oid": "64d8b79486be13d8b74ea612"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:35:32.180Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8ce7aa3e059b43f4e9d3f"
+  },
+  "username": "anjar",
+  "content": "Headphone ini recommended banget buat pelajar",
+  "videoId": {
+    "$oid": "64d8b4d986be13d8b74ea5ee"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:37:14.467Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8ceaba3e059b43f4e9d42"
+  },
+  "username": "dimas",
+  "content": "yg ini mic nya kayaknya lebih bagus daripada seri di atasnya",
+  "videoId": {
+    "$oid": "64d8b4d986be13d8b74ea5ee"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:38:03.443Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8cecda3e059b43f4e9d45"
+  },
+  "username": "risma",
+  "content": "Kalau sama yg H151 apa bedanya?",
+  "videoId": {
+    "$oid": "64d8b4d986be13d8b74ea5ee"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:38:37.621Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8cefaa3e059b43f4e9d48"
+  },
+  "username": "tegar",
+  "content": "bedanya sama yang H110 apa ya? bagusan mana?",
+  "videoId": {
+    "$oid": "64d8b4d986be13d8b74ea5ee"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:39:22.269Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8cf21a3e059b43f4e9d4b"
+  },
+  "username": "dwi",
+  "content": "pake ear cushion tambahan, jadi nyaman banget",
+  "videoId": {
+    "$oid": "64d8b4d986be13d8b74ea5ee"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:40:01.256Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8cf3ca3e059b43f4e9d4e"
+  },
+  "username": "doni",
+  "content": "saya tertarik beli kak",
+  "videoId": {
+    "$oid": "64d8b4d986be13d8b74ea5ee"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:40:28.868Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8cf57a3e059b43f4e9d51"
+  },
+  "username": "ilham",
+  "content": "Lebih butuh ke micnya sih, worth it ga nih?",
+  "videoId": {
+    "$oid": "64d8b4d986be13d8b74ea5ee"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:40:55.371Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8cf7da3e059b43f4e9d54"
+  },
+  "username": "jodhy",
+  "content": "itu headsetnya kalo buat telponan berjam jam lancar dan enak gak?",
+  "videoId": {
+    "$oid": "64d8b4d986be13d8b74ea5ee"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:41:33.915Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8cf9ca3e059b43f4e9d57"
+  },
+  "username": "amel",
+  "content": "kualitas mic nya yang paling bagus h111 atau h110?",
+  "videoId": {
+    "$oid": "64d8b4d986be13d8b74ea5ee"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:42:04.219Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8cfd9a3e059b43f4e9d5a"
+  },
+  "username": "harry",
+  "content": "mau nanya, kalo buat call center connect ke pc bisa kan?",
+  "videoId": {
+    "$oid": "64d8b4d986be13d8b74ea5ee"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:43:05.536Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8d009a3e059b43f4e9d61"
+  },
+  "username": "fajar",
+  "content": "ini kalo ke PC harus pake splitter ya?",
+  "videoId": {
+    "$oid": "64d8b4d986be13d8b74ea5ee"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:43:53.077Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8d03ea3e059b43f4e9d64"
+  },
+  "username": "rachel",
+  "content": "cara aktivin mic nya gmn?",
+  "videoId": {
+    "$oid": "64d8b4d986be13d8b74ea5ee"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:44:46.827Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8d059a3e059b43f4e9d67"
+  },
+  "username": "anto",
+  "content": "lumayan bagus nih kayaknya",
+  "videoId": {
+    "$oid": "64d8b4d986be13d8b74ea5ee"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:45:13.094Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8d0a7a3e059b43f4e9d8e"
+  },
+  "username": "derry",
+  "content": "cocok buat music producer nih",
+  "videoId": {
+    "$oid": "64d8b65286be13d8b74ea5fe"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:46:31.104Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8d0dba3e059b43f4e9d91"
+  },
+  "username": "mila",
+  "content": "Untuk monitoring gitar elektrik pake soundcard bagus ga?",
+  "videoId": {
+    "$oid": "64d8b65286be13d8b74ea5fe"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:47:23.168Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8d0f2a3e059b43f4e9d94"
+  },
+  "username": "mohan",
+  "content": "ini ada mic nya ga sih?",
+  "videoId": {
+    "$oid": "64d8b65286be13d8b74ea5fe"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:47:46.891Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8d11aa3e059b43f4e9d97"
+  },
+  "username": "ammar",
+  "content": "Kak ini kalo buat gaming bagus ga?",
+  "videoId": {
+    "$oid": "64d8b65286be13d8b74ea5fe"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:48:26.109Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8d168a3e059b43f4e9d9a"
+  },
+  "username": "john",
+  "content": "utk harga segini headphone nya udh bagus sih",
+  "videoId": {
+    "$oid": "64d8b65286be13d8b74ea5fe"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:49:44.228Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8d1a5a3e059b43f4e9db3"
+  },
+  "username": "aldi",
+  "content": "Saya udh pake 2 tahunan masih awet banget ini wkwk",
+  "videoId": {
+    "$oid": "64d8b7f986be13d8b74ea618"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:50:45.415Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8d1c6a3e059b43f4e9db6"
+  },
+  "username": "veni",
+  "content": "Bisa untuk windows 11 ga?",
+  "videoId": {
+    "$oid": "64d8b7f986be13d8b74ea618"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:51:18.048Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8d1e0a3e059b43f4e9db9"
+  },
+  "username": "harry",
+  "content": "Scrollnya cepet rusak ga kak?",
+  "videoId": {
+    "$oid": "64d8b7f986be13d8b74ea618"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:51:44.786Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8d203a3e059b43f4e9dd0"
+  },
+  "username": "derry",
+  "content": "desainnya menarik",
+  "videoId": {
+    "$oid": "64d8b69686be13d8b74ea602"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:52:19.456Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8d24fa3e059b43f4e9de7"
+  },
+  "username": "kiki",
+  "content": "ini cara ngecharge nya gimana ya?",
+  "videoId": {
+    "$oid": "64d8b6ba86be13d8b74ea604"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:53:35.281Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8d261a3e059b43f4e9dea"
+  },
+  "username": "hendro",
+  "content": "Chargernya tipe C?",
+  "videoId": {
+    "$oid": "64d8b6ba86be13d8b74ea604"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:53:53.519Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8d330a3e059b43f4e9e13"
+  },
+  "username": "dimas",
+  "content": "ini cara belinya gmn?",
+  "videoId": {
+    "$oid": "64d8b7d986be13d8b74ea616"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:57:20.907Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8d356a3e059b43f4e9e16"
+  },
+  "username": "teddy",
+  "content": "bagus desainnya",
+  "videoId": {
+    "$oid": "64d8b7d986be13d8b74ea616"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:57:58.073Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8d387a3e059b43f4e9e19"
+  },
+  "username": "bambang",
+  "content": "pengen beli ini",
+  "videoId": {
+    "$oid": "64d8b7d986be13d8b74ea616"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:58:47.365Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d8d3b4a3e059b43f4e9e1c"
+  },
+  "username": "rachel",
+  "content": "ini ada varian warna apa aja kak?",
+  "videoId": {
+    "$oid": "64d8b7d986be13d8b74ea616"
+  },
+  "createdAt": {
+    "$date": "2023-08-13T12:59:32.503Z"
+  },
+  "__v": 0
+}]

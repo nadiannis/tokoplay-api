@@ -15,7 +15,8 @@
     "lint": "eslint . --ext .js",
     "lint:fix": "eslint . --ext .js --fix",
     "prettier:check": "prettier --check .",
-    "prettier:fix": "prettier --write ."
+    "prettier:fix": "prettier --write .",
+    "seed": "node src/seeds/index"
   },
   "dependencies": {
     "cors": "^2.8.5",
