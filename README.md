@@ -180,9 +180,9 @@ This is the implementation of the database design in MongoDB.
 
 ### Database Explanation
 
-- There are 3 collections: products, videos, & comments.
-- A video can have many products, and a product can be in many videos. It is many-to-many relationship. In MongoDB, we can use array as a value of the field. Instead of adding a collection to store the id of video & product, I put array of product id in each video document since the products will also need to be retrieved when a video is retrieved.
-- A video has many comments. But a comment belongs to just one video. It is one-to-many relationship. There is a video id in each comment document to identify which comment belongs to which video.
+- There are 3 collections: `products`, `videos`, & `comments`.
+- A video can have many products, and a product can be in many videos. It is **many-to-many relationship**. In MongoDB, we can use array as a value of the field. Instead of adding a collection to store the id of video & product, I put array of product id in each video document since the products will also need to be retrieved when a video is retrieved.
+- A video has many comments. But a comment belongs to just one video. It is **one-to-many relationship**. There is a video id in each comment document to identify which comment belongs to which video.
 
 ## API Structure
 
