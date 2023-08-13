@@ -47,6 +47,7 @@
 [`^ back to top ^`](#table-of-contents)
 
 - Language: [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- JavaScript Runtime Environment: [Node.js](https://nodejs.org)
 - Web Framework: [Express](https://expressjs.com)
 - Database: [MongoDB](https://www.mongodb.com)
 - ODM: [Mongoose](https://mongoosejs.com)
@@ -61,7 +62,7 @@
 
 - Make sure you have [Node.js](https://nodejs.org) & [Yarn](https://yarnpkg.com) installed on your computer.
 
-- I use MongoDB database on local. You can also create the database on your local, but make sure you have [MongoDB Community Server](https://www.mongodb.com/docs/manual/administration/install-community) & [MongoDB Shell](https://www.mongodb.com/try/download/shell) installed on your computer.
+- Create a MongoDB database. You can create the database on your local, but make sure you have [MongoDB Community Server](https://www.mongodb.com/docs/manual/administration/install-community) & [MongoDB Shell](https://www.mongodb.com/try/download/shell) installed on your computer. You can also create the database in the cloud through [MongoDB Atlas](https://www.mongodb.com/atlas/database).
 
 - Clone the repo.
 
@@ -75,7 +76,7 @@
 
 - Make a copy of `env.example` file & rename it to `.env`.
 
-  Write a MongoDB URI to connect the API to a database. Make sure the MongoDB is ready to use. I use MongoDB database on local, named `tokoplay`.
+  Write a MongoDB URI to connect the API to a database. Make sure the MongoDB is ready to use. I use MongoDB database, named `tokoplay`.
 
   ```bash
   # example
@@ -99,7 +100,25 @@ yarn dev
 
 ### Prepopulate Data
 
-You can prepopulate data into the database. I put the sample data in `./src/seeds/`. The data is in JSON. If you have [MongoDB Community Server](https://www.mongodb.com/docs/manual/administration/install-community) installed on your computer, you can use MongoDB Compass to import the JSON data to the database by first creating the database (`tokoplay`) & collections (`products`, `videos`, `comments`). Then in each collection, import the JSON data.
+You can prepopulate data into the database. I put the sample data in `./src/seeds/data/`. The data is in JSON. There are 2 ways to prepopulate data into the database.
+
+**1. By running a script.**
+
+The script is located in `./src/seeds/index.js`. Prepopulate the data by running this command in the root of the project.
+
+```bash
+node ./src/seeds/index
+```
+
+You can also use [Yarn](https://yarnpkg.com) to run the script.
+
+```bash
+yarn seed
+```
+
+**2. By importing directly through [MongoDB Atlas](https://www.mongodb.com/atlas/database) or [MongoDB Compass](https://www.mongodb.com/products/compass).**
+
+If you can access the database directly, you can import JSON data through [MongoDB Atlas](https://www.mongodb.com/atlas/database) or [MongoDB Compass](https://www.mongodb.com/products/compass) installed on your computer. First, make sure that the database (`tokoplay`) & collections (`products`, `videos`, `comments`) are created. Then in each collection, import the JSON data.
 
 ## Database Structure
 
