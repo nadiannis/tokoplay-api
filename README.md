@@ -8,6 +8,7 @@
 ## Table of Contents
 
 - [Description](#description)
+- [Live Demo](#live-demo)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Run Locally](#run-locally)
@@ -19,7 +20,13 @@
 
 [`^ back to top ^`](#table-of-contents)
 
-**Tokoplay** is a platform where seller can promote products through videos to potential buyers. It is a simple clone of Tokopedia Play. This repo is the API of the app. It is built with [Express](https://expressjs.com). The data is stored in [MongoDB](https://www.mongodb.com) database.
+**Tokoplay** is a platform where seller can promote products through videos to potential buyers. It is a simple clone of Tokopedia Play. This repo is the API of the app. It is built with [Express](https://expressjs.com). The data is stored in [MongoDB](https://www.mongodb.com) database. You can access the frontend app in [this repo](https://github.com/nadiannis/tokoplay-web).
+
+## Live Demo
+
+[`^ back to top ^`](#table-of-contents)
+
+Check out the deployed API of **Tokoplay** here: [tokoplay.up.railway.app](https://tokoplay.up.railway.app)
 
 ## Features
 
