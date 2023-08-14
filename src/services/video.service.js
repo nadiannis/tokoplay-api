@@ -7,12 +7,12 @@ const getAll = async (query) => {
   if (!query) {
     videos = await Video.find({}, '_id title thumbnailUrl createdAt');
   } else {
-    const { page, limit, sort } = query;
+    const { page, limit, sort, filter } = query;
 
     const sortValue =
       sort === 'recent' ? { createdAt: 'desc' } : { createdAt: 'asc' };
 
-    videos = await Video.find({}, '_id title thumbnailUrl createdAt')
+    videos = await Video.find(filter, '_id title thumbnailUrl createdAt')
       .limit(limit)
       .skip((page - 1) * limit)
       .sort({ ...sortValue });
@@ -67,8 +67,8 @@ const remove = async (videoId) => {
   return video;
 };
 
-const count = async () => {
-  const totalVideos = await Video.countDocuments();
+const count = async (filter = {}) => {
+  const totalVideos = await Video.countDocuments(filter);
 
   return totalVideos;
 };

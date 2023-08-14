@@ -7,9 +7,15 @@ const getAll = async (req, res) => {
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 12;
     const sort = req.query.sort;
+    const q = req.query.q;
 
-    const data = await videoService.getAll({ page, limit, sort });
-    const count = await videoService.count();
+    const filter = {};
+    if (q) {
+      filter.title = { $regex: q, $options: 'i' };
+    }
+
+    const data = await videoService.getAll({ page, limit, sort, filter });
+    const count = await videoService.count(filter);
     const totalPages = Math.ceil(count / limit);
 
     const message =
