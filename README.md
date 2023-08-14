@@ -20,7 +20,7 @@
 
 [`^ back to top ^`](#table-of-contents)
 
-**Tokoplay** is a platform where seller can promote products through videos to potential buyers. It is a simple clone of Tokopedia Play. This repo is the API of the app. It is built with [Express](https://expressjs.com). The data is stored in [MongoDB](https://www.mongodb.com) database. You can access the frontend app in [this repo](https://github.com/nadiannis/tokoplay-web).
+**Tokoplay** is a platform where seller can promote products through videos to potential buyers. It is a simple clone of Tokopedia Play. It is built for the final project of Generasi GIGIH 3.0. This repo is the API of the app. The API is built with [Express](https://expressjs.com). The data is stored in [MongoDB](https://www.mongodb.com) database. You can access the frontend app in [this repo](https://github.com/nadiannis/tokoplay-web).
 
 ## Live Demo
 
@@ -32,21 +32,24 @@ Check out the deployed API of **Tokoplay** here: [tokoplay.up.railway.app](https
 
 [`^ back to top ^`](#table-of-contents)
 
+These are the features of the API. Features marked with _`(additional)`_ are features I added that are not included in the minimum requirements.
+
 - [Get list of videos](#get-apivideos)
-- [Sort videos by the most recent](#get-apivideossortrecent)
-- [Add a video](#post-apivideos)
+- [Sort videos by the most recent](#get-apivideossortrecent) _(additional)_
+- [Search videos](#get-apivideosqquery) _(additional)_
+- [Add a video](#post-apivideos) _(additional)_
 - [Get video details](#get-apivideosvideoid)
-- [Update a video](#patch-apivideosvideoid)
-- [Delete a video](#delete-apivideosvideoid)
-- [Get list of products](#get-apiproducts)
-- [Add a product](#post-apiproducts)
-- [Update a product](#patch-apiproductsproductid)
-- [Delete a product](#delete-apiproductsproductid)
+- [Update a video](#patch-apivideosvideoid) _(additional)_
+- [Delete a video](#delete-apivideosvideoid) _(additional)_
+- [Get list of products](#get-apiproducts) _(additional)_
+- [Add a product](#post-apiproducts) _(additional)_
+- [Update a product](#patch-apiproductsproductid) _(additional)_
+- [Delete a product](#delete-apiproductsproductid) _(additional)_
 - [Get products of a video](#get-apivideosvideoidproducts)
-- [Add product(s) to a video](#post-apivideosvideoidproducts)
-- [Delete a product from a video](#delete-apivideosvideoidproductsproductid)
+- [Add product(s) to a video](#post-apivideosvideoidproducts) _(additional)_
+- [Delete a product from a video](#delete-apivideosvideoidproductsproductid) _(additional)_
 - [Get comments of a video](#get-apivideosvideoidcomments)
-- [Sort comments by the most recent](#get-apivideosvideoidcommentssortrecent)
+- [Sort comments by the most recent](#get-apivideosvideoidcommentssortrecent) _(additional)_
 - [Add a comment to a video](#post-apivideosvideoidcomments)
 
 ## Tech Stack
@@ -342,6 +345,82 @@ Returns all videos.
 [`^ back to top ^`](#features)
 
 Returns all videos sorted by the most recent.
+
+- **URL Params**
+
+  None
+
+- **Data Params**
+
+  None
+
+- **Headers**
+
+  Content-Type: application/json
+
+- **Success Response**
+
+  - **Code: 200**
+
+    Content:
+
+    ```
+    {
+      "status": "success",
+      "message": "Videos retrieved successfully",
+      "data": [
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+        {<simpler_video_object>},
+      ],
+      "page": integer,
+      "totalPages": integer,
+      "count": integer
+    }
+    ```
+
+    OR
+
+    Content:
+
+    ```
+    {
+      "status": "success",
+      "message": "There are no videos available",
+      "data": [],
+      "page": 1,
+      "totalPages": 0,
+      "count": 0
+    }
+    ```
+
+- **Error Response**
+
+  - **Code: 500**
+
+    Content:
+
+    ```
+    {
+      "status": "error",
+      "message": <error_message>
+    }
+    ```
+
+### GET /api/videos?q=query
+
+[`^ back to top ^`](#features)
+
+Returns videos filtered by a query.
 
 - **URL Params**
 
