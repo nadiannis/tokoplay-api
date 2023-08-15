@@ -1,5 +1,6 @@
 <div align="center">
-  <br>
+  <a href="https://tokoplay.up.railway.app"><img width="140" height="140" src="https://raw.githubusercontent.com/nadiannis/tokoplay-web/main/public/android-chrome-512x512.png"></a>
+  <br><br>
   <h1>Tokoplay API</h1>
   <p>Promote products through videos</p>
   <br>
@@ -12,6 +13,9 @@
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Run Locally](#run-locally)
+  - [Getting Started](#getting-started)
+  - [Development](#development)
+  - [Prepopulate Data](#prepopulate-data)
 - [Database Structure](#database-structure)
 - [API Structure](#api-structure)
 - [API Endpoints](#api-endpoints)
